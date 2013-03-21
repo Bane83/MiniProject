@@ -10,14 +10,15 @@ class LogovanjeController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $prodaja = Application_Model_DbTable_Prodaja::proba(1);
+        $prodaja = new Application_Model_DbTable_Prodaja();
         
-        echo $prodaja;
+        $rezultat= $prodaja->proba(1);
         
-       
+        $this->view->rezultat=$rezultat;
+        
+           
         
         
-                
         
         
         
